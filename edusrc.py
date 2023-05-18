@@ -20,7 +20,7 @@ def rankchange():
         print(rank)
         if(rank!=rank1):
             text_title = name+'您的EDUSRC漏洞审核通过啦(*^▽^*)'
-            text_content = "在另一条时间线，这么做是对的  \n 加油！少年\n"+"详情请点击"+url
+            text_content = "在另一条时间线里，这么做是对的  \n 加油！少年\n"+"\n 详情请点击"+url
             sendKey = 'SCT210463TFGHBI8F8NZgpOQDxZSSpXW01'
 
             url = f"https://sctapi.ftqq.com/{sendKey}.send"
@@ -31,7 +31,8 @@ def rankchange():
             }
             response = requests.post(url, data=data)
             if json.loads(response.text)["data"]['error'] == 'SUCCESS':
-                print("消息推送成功")
+                 print("消息推送成功")
+            break
         else:
             print("服务正在运行中...")
 
